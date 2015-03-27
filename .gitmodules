@@ -1,0 +1,3 @@
+[submodule "vendor/local/ls-rails"]
+	path = vendor/local/ls-rails
+	url = git@github.com:skiprope/ls-rails.git
