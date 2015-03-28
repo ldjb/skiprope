@@ -2,18 +2,27 @@ $octagon:               29% 0, 71% 0, 100% 29%, 100% 71%, 71% 100%, 29% 100%, 0 
 $bgGradientFrom:        #00ffbe
 $bgGradientTo:          #00f8d5
 $bgNavbar:              #fff
-$bgNavbarInput:         #e9e9e9
+$bgNavbarInput:         #fff
+$bgNavbarInputSelected: #d5ffbe
+$bgNavbarSelected:      #d5ffbe
+$bgNavbarActive:        #d5ffbe
 $colorNavbar:           #222
 $colorNavbarInput:      #222
 $iconOctagonBorder:     #fff
 $iconOctagonBackground: #444
 $iconOctagonStrike:     skyblue
 
+@import url("static/pipeline/vendor/batch.sass")
+
 nav.navbar
   border:     none
   background: $bgNavbar
   &, *
     color: $colorNavbar !important
+  .nav > li:hover, .dropdown-menu > li:hover a,
+    background: $bgNavbarSelected
+  .nav > li.active
+    background: $bgNavbarActive
   .navbar-header.navbar-center
     margin:     0 auto
     display:    block
@@ -43,6 +52,10 @@ nav.navbar
     button, input
       background: $bgNavbarInput
       color:      $colorNavbarInput !important
+      box-shadow: none
+      outline: none
+      &:focus, &:hover
+        background: $bgNavbarInputSelected
     button
       margin-left: 0
     input
@@ -77,6 +90,8 @@ nav.navbar
     margin-right:  -1px
     border-top:    none
     border-radius: 0
+  .fatico .batch-icon
+    padding-right: 15px
 
 html, body
   width: 100%
@@ -136,6 +151,18 @@ footer
     top:        50%
     margin-top: -1px
     transform:  rotate(90deg)
+
+.nav-icon, .batch-icon
+  position: relative
+
+.nav-icon .label, .batch-icon .label
+  position: absolute
+  bottom: 7px
+  right: 5px
+  padding: 2px 3px
+
+.label
+  border-radius: 0
 
 .SERVE-TEST:hover .SERVE-TEST-SHOW
   display: block

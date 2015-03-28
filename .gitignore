@@ -3,4 +3,4 @@ style/sass/*.css.map
 .sass-cache
 .DS_Store
 Thumbs.db
-vendor/font
+/vendor/font
