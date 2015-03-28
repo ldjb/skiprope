@@ -1,0 +1,4 @@
+//both don't work, 61400+ out of char range, and icon local gets escaped as a tag
+//%span.batch-icon{ data: {icon: icon} }
+%span.batch-icon{ data: {icon: "#{String.new.concat(icon)}"} }
+#{label ||= ""}

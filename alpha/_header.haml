@@ -1,0 +1,68 @@
+!!!
+- avatar = "http://www.gravatar.com/avatar/5817b3b6450acce3cc9bb5df9c9cb9cc?s=256"
+%html
+  %head
+    %meta{charset: "utf-8"}/
+    %title α
+    %link{href: "static/pipeline/vendor/bootstrap.min.css", rel: "stylesheet"}/
+    %link{href: "alpha.css", rel: "stylesheet"}/
+  %body
+    %nav.navbar.navbar-default.navbar-static-top
+      .container
+        .navbar-header.navbar-center
+          %a.navbar-brand{href: "#"} skiprope α
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li
+              %a{href: "#"}
+                %span.batch-icon{data: {icon: ""}}
+          %form.navbar-form.navbar-left.fill{role: "search"}
+            .form-group
+              %input.form-control{type: "text"}/
+            %button.btn.btn-default{type: "submit"}
+              %span.batch-icon{data: {icon: ""}}
+          %ul.nav.navbar-nav.navbar-right
+            %li
+              %a.nav-icon.nav-btn-notif{href: "#"}
+                %span.batch-icon{data: {icon: ""}}
+                %span.label.label-danger 99+
+            %li
+              %a.nav-icon.nav-btn-inbox{href: "#"}
+                %span.batch-icon{data: {icon: ""}}
+                %span.label.label-danger 0
+            %li
+              %a.nav-icon.nav-btn-askall{href: "#"}
+                %span.batch-icon{data: {icon: ""}}
+            %li.dropdown.SERVE-TEST
+              %a.dropdown-toggle.navbar-profile{aria: {expanded: false}, data: {toggle: "dropdown"}, href: "#", role: "button"}
+                %img{src: "#{avatar}"}/
+              %ul.dropdown-menu.SERVE-TEST-SHOW{role: "menu"}
+                %li.media.navbar-media-profile
+                  %a{href: "#"}
+                    .pull-left
+                      %img{src: "http://www.gravatar.com/avatar/5817b3b6450acce3cc9bb5df9c9cb9cc?s=256"}/
+                    .media-body
+                      %span User
+                      %small @user
+                %li.divider
+                %li.fatico
+                  %a{href: "#"}
+                    %span.batch-icon{data: {icon: ""}}
+                    Settings
+                %li.fatico
+                  %a{href: "#"}
+                    %span.batch-icon{data: {icon: ""}}
+                    Keyboard Shortcuts
+                %li.divider
+                %li.fatico
+                  %a{href: "#"}
+                    %span.batch-icon{data: {icon: ""}}
+                    Help
+                %li.fatico
+                  %a{href: "#"}
+                    %span.batch-icon{data: {icon: ""}}
+                    Report a Problem
+                %li.fatico
+                  %a{href: "#"}
+                    %span.batch-icon{data: {icon: ""}}
+                    Log out
