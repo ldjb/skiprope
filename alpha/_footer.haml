@@ -3,14 +3,11 @@
     %hr/
     %span.git
       //dirtyyyyyy
-      - rev    ||= nil
-      - branch ||= ""
-      - if defined? Rails and Rails.env.development? or defined? Serve
+      - if not defined? rev and (defined? Rails and Rails.env.development? or defined? Serve)
         - rev    = `git rev-parse --short HEAD`.strip
-        - branch = `git rev-parse --abbrev-ref HEAD`.strip
-      - if rev
+      - if defined? rev
         %a{href: "https://github.com/skiprope/skiprope/tree/#{rev}", target: "blank"}
-          running skiprope##{branch.strip}@#{rev}
+          running skiprope@#{rev}
     .icon-container
       .icon-octagon
         .icon-octagon.icon-octagon-inner
