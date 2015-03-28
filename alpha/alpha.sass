@@ -1,0 +1,141 @@
+$octagon:               29% 0, 71% 0, 100% 29%, 100% 71%, 71% 100%, 29% 100%, 0 71%, 0 29%
+$bgGradientFrom:        #00ffbe
+$bgGradientTo:          #00f8d5
+$bgNavbar:              #fff
+$bgNavbarInput:         #e9e9e9
+$colorNavbar:           #222
+$colorNavbarInput:      #222
+$iconOctagonBorder:     #fff
+$iconOctagonBackground: #444
+$iconOctagonStrike:     skyblue
+
+nav.navbar
+  border:     none
+  background: $bgNavbar
+  &, *
+    color: $colorNavbar !important
+  .navbar-header.navbar-center
+    margin:     0 auto
+    display:    block
+    float:      none
+    position:   absolute
+    right:      0
+    left:       0
+    text-align: center
+    width:      100%
+    z-index:    -1
+    .navbar-brand
+      margin:      0
+      padding:     0
+      padding-top: 25px
+      float:       none
+      line-height: 0
+      display:     inline-block
+  form.fill
+    margin:    0
+    height:    50px
+    font-size: 0
+    button, input, .form-group
+      height:        100%
+      border-radius: 0
+      font-size:     14px
+      border:        none
+    button, input
+      background: $bgNavbarInput
+      color:      $colorNavbarInput !important
+    button
+      margin-left: 0
+    input
+      margin-right: 0
+      border-right: none
+  .navbar-profile
+    padding: 0
+    margin:  0
+    img
+      height: 50px
+      width:  50px
+  .navbar-media-profile
+    a
+      min-height:  64px
+      padding-top: 0
+    img
+      width:  64px
+      height: 64px
+    .pull-left
+      padding-right: 5px
+    .media-body, span, small
+      width:       200px
+      display:     inline-block
+      white-space: normal
+    span
+      font-size: 1.5em
+    small
+      display:   block
+      font-size: 1em
+  .dropdown-menu
+    margin-top:    -1px
+    margin-right:  -1px
+    border-top:    none
+    border-radius: 0
+
+html, body
+  width: 100%
+  height: 100%
+
+html, nav.navbar form input, nav.navbar form button
+  background-image:      $bgGradientFrom
+  background-image:      -moz-linear-gradient(-45deg,  $bgGradientFrom 0%, $bgGradientTo 100%)
+  background-image:      -webkit-gradient(linear, left top, right bottom, color-stop(0%,$bgGradientFrom), color-stop(100%,$bgGradientTo))
+  background-image:      -webkit-linear-gradient(-45deg,  $bgGradientFrom 0%,$bgGradientTo 100%)
+  background-image:      -o-linear-gradient(-45deg,  $bgGradientFrom 0%,$bgGradientTo 100%)
+  background-image:      -ms-linear-gradient(-45deg,  $bgGradientFrom 0%,$bgGradientTo 100%)
+  background-image:      linear-gradient(135deg,  $bgGradientFrom 0%,$bgGradientTo 100%)
+  background-attachment: fixed
+
+body
+  background:     url(/static/pipeline/images/xoxo.png)
+  padding-bottom: 500em
+  &.toadnav
+    padding-top: 70px
+
+footer
+  position: relative
+  hr
+    margin-top:    37px
+    margin-bottom: 37px
+    border-top:    1px solid $iconOctagonBorder
+    border-bottom: 1px solid $iconOctagonBorder
+  .icon-container
+    width:       64px
+    height:      64px
+    position:    absolute
+    top:         -32px
+    left:        50%
+    margin-left: -32px
+    *
+      width:    100%
+      height:   100%
+      position: absolute
+      top:      0
+      left:     0
+  .icon-octagon
+    -webkit-clip-path: polygon($octagon)
+    -moz-clip-path:    polygon($octagon)
+    -ms-clip-path:     polygon($octagon)
+    clip-path:         polygon($octagon)
+    background:        $iconOctagonBorder
+    &.icon-octagon-inner
+      background: $iconOctagonBackground
+      width:      54px
+      height:     54px
+      top:        5px
+      left:       5px
+  .icon-strike
+    height:     2px
+    background: $iconOctagonStrike
+    top:        50%
+    margin-top: -1px
+    transform:  rotate(90deg)
+
+.SERVE-TEST:hover .SERVE-TEST-SHOW
+  display: block
