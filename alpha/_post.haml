@@ -1,0 +1,42 @@
+- avatar = "http://www.gravatar.com/avatar/5817b3b6450acce3cc9bb5df9c9cb9cc?s=256"
+
+.post-container
+  .header
+    %a.icon{href: "#"}
+      %img{src: avatar}
+    %a{href: "#"}
+      User
+    asked "Would you do a lorem for me?"
+  .body
+    Lorem no go to a generator ipsum
+    .superfooter
+      .who
+        %a.icon{href: "#"}
+          %img{src: avatar}
+        .box
+          %div
+            answered by
+            %a{href: "#"}
+              User
+          .time
+            about 19 eons ago.
+        .btn-rack
+          .btn.btn-favorite
+            %span.batch-icon
+            6
+          .btn.btn-report
+            %span.batch-icon{data: {icon: ""}}
+          .btn.btn-trash
+            %span.batch-icon{data: {icon: ""}}
+  .footer
+    .favorites
+      - 6.times do
+        %a.iconwell{href: "#"}
+          %img{src: avatar}
+    .body
+      - 6.times do
+        = render "comment"
+      %form
+        %textarea{placeholder: "Write a comment..."}
+        %input.btn.btn-submit{type: "submit", value: "Comment"}
+        .clearfix

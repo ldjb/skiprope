@@ -3,16 +3,22 @@ $bgGradientFrom:        #00ffbe
 $bgGradientTo:          #00f8d5
 $bgNavbar:              #fff
 $bgNavbarInput:         #fff
+$bgSidebar:             #fff
 $bgNavbarInputSelected: #d5ffbe
 $bgNavbarSelected:      #d5ffbe
 $bgNavbarActive:        #d5ffbe
+$bgSidebarSelected:     transparent
+$bgPost:                #fff
+$bgPostHeader:          #f4f4f4
+$bgBtnRackSelect:       #999
+$bgBtnRackDivider:      #555
 $colorNavbar:           #222
 $colorNavbarInput:      #222
 $colorFooterText:       #222
 $colorFooterAHover:     #555
 $iconOctagonBorder:     #fff
 $iconOctagonBackground: #444
-$iconOctagonStrike:     skyblue
+$iconOctagonStrike:     #66bed5
 
 @import url("static/pipeline/vendor/batch.sass")
 
@@ -76,8 +82,6 @@ nav.navbar
     img
       width:  64px
       height: 64px
-    .pull-left
-      padding-right: 5px
     .media-body, span, small
       width:       200px
       display:     inline-block
@@ -95,11 +99,180 @@ nav.navbar
   .fatico .batch-icon
     padding-right: 15px
 
+.media
+  .pull-left
+    padding-right: 5px
+  .media-body
+    span
+      font-size: 1.5em
+    small
+      display:   block
+      font-size: 1em
+
+.sidebar
+  background: $bgSidebar
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+  a.media
+    &:hover
+      background: $bgSidebarSelected
+    img
+      width:  262px
+      height: 262px
+    .media-body
+      padding:     15px
+      display:     inline-block
+      white-space: normal
+      width:       100%
+
+.userstats
+  ul
+    padding:        0
+    margin:         0
+    padding-bottom: 15px
+    list-style:     none
+    font-size:      0
+    li
+      width:          50%
+      display:        inline-block
+      font-size:      16px
+      padding:        5px
+      padding-bottom: 15px
+      position:       relative
+      small
+        display:        block
+        position:       absolute
+        bottom:         2px
+        left:           10px
+        font-size:      11px
+        text-transform: uppercase
+
+.post-container
+  text-align: justify
+  background: $bgPost
+  margin-left: 48px
+  margin-bottom: 5px
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+  .header
+    a:not(.icon)
+      display: block
+    .icon
+      position: absolute
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+      left: -64px
+      top: 0
+      &, img
+        width: 64px
+        height: 64px
+  .body, .header, .footer
+    position: relative
+    padding: 5px
+    background: $bgPostHeader
+  & > .body, .superfooter
+    padding-top: 15px
+    padding-bottom: 0
+  .body, .superfooter
+    background: $bgPost
+  .superfooter
+    position: relative
+    left: -5px
+    .who
+      position: relative
+      a.icon
+        margin-right: 5px
+        &, img
+          width: 48px
+          height: 48px
+        position: absolute
+      .box
+        padding-left: 53px
+        display: inline-block
+        div
+          height: 24px
+          line-height: 24px
+    .btn-rack
+      display: block
+      position: absolute
+      right: 5px
+      bottom: 0
+      z-index: 8
+      .divider
+        display: inline-block
+        position: relative
+        &:before
+          content: ""
+          width: 1px
+          height: 16px
+          top: -13px
+          position: absolute
+          background: $bgBtnRackDivider
+      .btn
+        display: inline-block
+        &:hover
+          color: $bgBtnRackSelect
+        &:active
+          box-shadow: none
+      .btn-favorite
+        .batch-icon:before
+          content: ""
+          color: darkred
+        &:hover .batch-icon:before
+          content: ""
+        &:active .batch-icon:before
+          content: ""
+  .comment-container
+    clear: both
+    margin-bottom: 5px
+    a.iconwell
+      margin-right: 5px
+      &, img
+        width: 48px
+        height: 48px
+    .who
+      min-height: 24px
+      line-height: 24px
+    .comment
+      min-height: 24px
+  form
+    position: relative
+    left: 0
+    right: 0
+    padding-bottom: 29px
+    textarea
+      min-width: 100%
+      max-width: 100%
+      border: none
+      padding: 7px
+    input
+      position: absolute
+      border-radius: 0
+      bottom: 0
+      right: 0
+      height: 34px
+      background: white
+  .footer
+    .favorites
+      margin-top: 5px
+      &:before
+        font-family: Batch
+        left: -8px
+        top: 0
+        content: ""
+        position: absolute
+        font-size: 16px
+        color: darkred
+      .iconwell
+        &, img
+          width: 24px
+          height: 24px
+    .body
+      background: $bgPostHeader
+
+
 html, body
   width:  100%
   height: 100%
 
-html, nav.navbar form input, nav.navbar form button
+html, .gradientBG
   background-image:      $bgGradientFrom
   background-image:      -moz-linear-gradient(-45deg,  $bgGradientFrom 0%, $bgGradientTo 100%)
   background-image:      -webkit-gradient(linear, left top, right bottom, color-stop(0%,$bgGradientFrom), color-stop(100%,$bgGradientTo))
@@ -111,7 +284,6 @@ html, nav.navbar form input, nav.navbar form button
 
 body
   background:     url(/static/pipeline/images/xoxo.png)
-  padding-bottom: 500em
   &.toadnav
     padding-top: 70px
 
@@ -174,6 +346,20 @@ footer
 
 .label
   border-radius: 0
+
+.clearfix:after
+  visibility: hidden
+  display: block
+  font-size: 0
+  content: " "
+  clear: both
+  height: 0
+.clearfix
+  display: inline-block
+* html .clearfix
+  height: 1%
+.clearfix
+  display: block
 
 .SERVE-TEST:hover .SERVE-TEST-SHOW
   display: block
