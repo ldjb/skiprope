@@ -8,6 +8,8 @@ $bgNavbarSelected:      #d5ffbe
 $bgNavbarActive:        #d5ffbe
 $colorNavbar:           #222
 $colorNavbarInput:      #222
+$colorFooterText:       #222
+$colorFooterAHover:     #555
 $iconOctagonBorder:     #fff
 $iconOctagonBackground: #444
 $iconOctagonStrike:     skyblue
@@ -115,6 +117,15 @@ body
 
 footer
   position: relative
+  &, *
+    color: $colorFooterText
+  a:hover
+    color: $colorFooterAHover
+  .git
+    font-size: 11px
+    position: absolute
+    top: 5px
+    left: 5px
   hr
     margin-top:    37px
     margin-bottom: 37px

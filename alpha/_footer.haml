@@ -1,6 +1,19 @@
 .container
   %footer
     %hr/
+    %span.git
+      //dirtyyyyyy
+      - rev    ||= nil
+      - branch ||= nil
+      - if rev.nil?
+        - rev       = IO.popen("git rev-parse HEAD")              { |p| rev    = p.gets }
+        - rev     ||= false
+      - if branch.nil?
+        - branch    = IO.popen("git rev-parse --abbrev-ref HEAD") { |p| branch = p.gets }
+        - branch  ||= false
+      - if rev
+        %a{href: "https://github.com/skiprope/skiprope/tree/#{rev.strip}", target: "blank"}
+          running skiprope##{branch.strip}@#{rev.strip[0..6]}
     .icon-container
       .icon-octagon
         .icon-octagon.icon-octagon-inner
