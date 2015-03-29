@@ -1,0 +1,11 @@
+- if defined? user
+  = render "core/index"
+- else
+  .landing.jumbotron.gradientBG
+    %h1 skiprope
+    %p Introducing a crowd based question and answering service for all
+    %p
+      %a.btn.btn-primary.btn-oversized{href: "/.hal/tomatofarm", role: "button"}
+        Sign up today!
+      %a.btn.btn-primary.or{href: "/feed"}
+        or take a look at the public answer stream

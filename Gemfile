@@ -12,7 +12,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # Use LiveScript for .ls assets
-gem 'ls-rails', "~> 1.1.2", :path => "./vendor/local/ls-rails"
+gem 'livescript-rails', ">= 1.1.0", :path => "./vendor/local/livescript-rails"
 # Use haml
 gem 'haml'
 gem 'haml-rails'

@@ -1,0 +1,54 @@
+%ul.nav.navbar-nav
+  %li
+    %a{href: "/"}
+      %span.batch-icon{data: {icon: ""}}
+%form.navbar-form.navbar-left.fill{role: "search", method: "GET", action: "/search"}
+  .form-group
+    %input.form-control{type: "text"}/
+  %button.btn.btn-default{type: "submit", disabled: true}
+    %span.batch-icon{data: {icon: ""}}
+%ul.nav.navbar-nav.navbar-right
+  %li
+    %a.nav-icon.nav-btn-notif{href: "/#{user.name}/notifications"}
+      %span.batch-icon{data: {icon: ""}}
+      %span.label.label-danger= user.notificationCount
+  %li
+    %a.nav-icon.nav-btn-inbox{href: "/#{user.name}/inbox"}
+      %span.batch-icon{data: {icon: ""}}
+      %span.label.label-danger= user.inboxCount
+  %li
+    %a.nav-icon.nav-btn-askall{href: "#"}
+      %span.batch-icon{data: {icon: ""}}
+  %li.dropdown
+    %a.dropdown-toggle.navbar-profile{aria: {expanded: false}, data: {toggle: "dropdown"}, href: "/#{user.name}", role: "button"}
+      %img{src: "#{user.avatar}"}/
+    %ul.dropdown-menu{role: "menu"}
+      %li.media.navbar-media-profile
+        %a{href: "/#{user.name}"}
+          .pull-left
+            %img{src: user.avatar}/
+          .media-body
+            %span= user.displayName
+            %small @#{user.name}
+      %li.divider
+      %li.fatico
+        %a{href: "/#{user.name}/settings"}
+          %span.batch-icon{data: {icon: ""}}
+          Settings
+      %li.fatico
+        %a{href: "#"}
+          %span.batch-icon{data: {icon: ""}}
+          Keyboard Shortcuts
+      %li.divider
+      %li.fatico
+        %a{href: "/.hal/help"}
+          %span.batch-icon{data: {icon: ""}}
+          Help
+      %li.fatico
+        %a{href: "https://github.com/skiprope/skiprope/issues"}
+          %span.batch-icon{data: {icon: ""}}
+          Report a Problem
+      %li.fatico
+        %a{href: "/.hal/logout"}
+          %span.batch-icon{data: {icon: ""}}
+          Log out

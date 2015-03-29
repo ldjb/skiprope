@@ -1,0 +1,29 @@
+-if defined? user
+  .sidebar
+    %a.media{href: "/#{user.name}"}
+      %img{src: user.avatar}/
+      .media-body
+        %span= user.displayName
+        %small @#{user.name}
+    .userstats
+      %ul
+        %li
+          %a{href: "#"}
+            %span{title: user.count.followers.full}
+              = user.count.followers.slim
+            %small followers
+        %li
+          %a{href: "#"}
+            %span{title: user.count.followers.full}
+              = user.count.following.slim
+            %small following
+        %li
+          %a{href: "#"}
+            %span{title: user.count.answers.full}
+              = user.count.answers.slim
+            %small answers
+        %li
+          %a{href: "#"}
+            %span{title: user.count.questions.full}
+              = user.count.questions.slim
+            %small questions
