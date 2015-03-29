@@ -1,0 +1,12 @@
+= render "header"
+
+%div.container
+  %div.row
+    %div.col-md-3
+      = render "sidebar"
+    %div.col-md-9
+      -# - 5.times do
+      = render "notification"
+  %div.row
+    %div.col-md-12
+      = render "footer"

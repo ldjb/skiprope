@@ -1,0 +1,22 @@
+- avatar = "http://www.gravatar.com/avatar/5817b3b6450acce3cc9bb5df9c9cb9cc?s=256"
+
+.answer.clearfix
+  %a.iconwell{href: "#"}
+    %img{src: avatar}
+  .header
+    .who
+      %a{href: "#"}
+        User
+      asked
+      %span{title: ""}
+        about 6 hours ago
+    .question
+      Lorem lorem ipsum lorem?
+  .body
+    %form.modalform
+      %textarea{placeholder: "Write your response..."}
+      .rack
+        %input.btn.btn-submit{type: "submit", value: "Answer"}
+        %input.btn.btn-danger{type: "button", value: "Delete"}
+        %input.btn.btn-warning{type: "button", value: "Report"}
+      .clearfix

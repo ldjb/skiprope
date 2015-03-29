@@ -1,3 +1,17 @@
 = render "header_dummy"
 
-= render "footer"
+%div.container
+  %div.row
+    %div.col-md-2
+    %div.col-md-8
+      .landing.jumbotron.gradientBG
+        %h1 skiprope
+        %p Introducing a crowd based question and answering service for all
+        %p
+          %a.btn.btn-primary.btn-oversized{href: "#", role: "button"}
+            Sign up today!
+          %a.btn.btn-primary.or{href: "#"}
+            or take a look at the public answer stream
+  %div.row
+    %div.col-md-12
+      = render "footer"

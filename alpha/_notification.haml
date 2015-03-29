@@ -1,0 +1,27 @@
+- avatar = "http://www.gravatar.com/avatar/5817b3b6450acce3cc9bb5df9c9cb9cc?s=256"
+
+%ul.notifications
+  - 6.times do
+    %li.notification.clearfix.unread
+      %a.iconwell{href: "#"}
+        %img{src: avatar}
+      %p
+        %a{href: "#"}
+          User
+        answered to your
+        %a{href: "#"}
+          question
+        %span{title: "really some time ago"}
+          some time ago
+  - 6.times do
+    %li.notification.clearfix
+      %a.iconwell{href: "#"}
+        %img{src: avatar}
+      %p
+        %a{href: "#"}
+          User
+        answered to your
+        %a{href: "#"}
+          question
+        %span{title: "really some time ago"}
+          some time ago

@@ -12,6 +12,9 @@ $bgPost:                #fff
 $bgPostHeader:          #f4f4f4
 $bgBtnRackSelect:       #999
 $bgBtnRackDivider:      #555
+$bgNotification:        #f4f4f4
+$bgNotificationHover:   #e4e4e4
+$bgNotificationUnread:  #d5beff
 $colorNavbar:           #222
 $colorNavbarInput:      #222
 $colorFooterText:       #222
@@ -21,6 +24,8 @@ $iconOctagonBackground: #444
 $iconOctagonStrike:     #66bed5
 
 @import url("static/pipeline/vendor/batch.sass")
+
+//BEGIN NAV
 
 nav.navbar
   border:     none
@@ -91,23 +96,19 @@ nav.navbar
     small
       display:   block
       font-size: 1em
-  .dropdown-menu
-    margin-top:    -1px
-    margin-right:  -1px
-    border-top:    none
-    border-radius: 0
+  .dropdown
+    &:hover .dropdown-menu
+      display: block
+    .dropdown-menu
+      margin-top:    -1px
+      margin-right:  -1px
+      border-top:    none
+      border-radius: 0
   .fatico .batch-icon
     padding-right: 15px
 
-.media
-  .pull-left
-    padding-right: 5px
-  .media-body
-    span
-      font-size: 1.5em
-    small
-      display:   block
-      font-size: 1em
+//END NAV
+//BEGIN SIDEBAR
 
 .sidebar
   background: $bgSidebar
@@ -146,64 +147,67 @@ nav.navbar
         font-size:      11px
         text-transform: uppercase
 
+//END SIDEBAR
+//BEGIN POST
+
 .post-container
-  text-align: justify
-  background: $bgPost
-  margin-left: 48px
+  text-align:    justify
+  background:    $bgPost
+  margin-left:   48px
   margin-bottom: 5px
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+  box-shadow:    0 0 10px rgba(0, 0, 0, 0.2)
   .header
     a:not(.icon)
       display: block
     .icon
-      position: absolute
+      position:   absolute
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
-      left: -64px
-      top: 0
-      &, img
-        width: 64px
+      left:       -64px
+      top:        0
+      &,img
+        width:  64px
         height: 64px
   .body, .header, .footer
-    position: relative
-    padding: 5px
+    position:   relative
+    padding:    5px
     background: $bgPostHeader
   & > .body, .superfooter
-    padding-top: 15px
+    padding-top:    15px
     padding-bottom: 0
   .body, .superfooter
     background: $bgPost
   .superfooter
     position: relative
-    left: -5px
+    left:     -5px
     .who
       position: relative
       a.icon
         margin-right: 5px
         &, img
-          width: 48px
+          width:  48px
           height: 48px
         position: absolute
       .box
         padding-left: 53px
-        display: inline-block
+        display:      inline-block
         div
-          height: 24px
+          height:      24px
           line-height: 24px
     .btn-rack
-      display: block
+      display:  block
       position: absolute
-      right: 5px
-      bottom: 0
-      z-index: 8
+      right:    5px
+      bottom:   0
+      z-index:  8
       .divider
-        display: inline-block
+        display:  inline-block
         position: relative
         &:before
-          content: ""
-          width: 1px
-          height: 16px
-          top: -13px
-          position: absolute
+          content:    ""
+          width:      1px
+          height:     16px
+          top:        -13px
+          position:   absolute
           background: $bgBtnRackDivider
       .btn
         display: inline-block
@@ -214,77 +218,44 @@ nav.navbar
       .btn-favorite
         .batch-icon:before
           content: ""
-          color: darkred
+          color:   darkred
         &:hover .batch-icon:before
           content: ""
         &:active .batch-icon:before
           content: ""
   .comment-container
-    clear: both
+    clear:         both
     margin-bottom: 5px
     a.iconwell
       margin-right: 5px
       &, img
-        width: 48px
+        width:  48px
         height: 48px
     .who
-      min-height: 24px
+      min-height:  24px
       line-height: 24px
     .comment
       min-height: 24px
-  form
-    position: relative
-    left: 0
-    right: 0
-    padding-bottom: 29px
-    textarea
-      min-width: 100%
-      max-width: 100%
-      border: none
-      padding: 7px
-    input
-      position: absolute
-      border-radius: 0
-      bottom: 0
-      right: 0
-      height: 34px
-      background: white
   .footer
     .favorites
       margin-top: 5px
       &:before
         font-family: Batch
-        left: -8px
-        top: 0
-        content: ""
-        position: absolute
-        font-size: 16px
-        color: darkred
+        left:        -8px
+        top:         0
+        content:     ""
+        position:    absolute
+        font-size:   16px
+        color:       darkred
       .iconwell
         &, img
-          width: 24px
+          width:  24px
           height: 24px
     .body
       background: $bgPostHeader
 
-html, .gradientBG
-  background-image:      $bgGradientFrom
-  background-image:      -moz-linear-gradient(-45deg,  $bgGradientFrom 0%, $bgGradientTo 100%)
-  background-image:      -webkit-gradient(linear, left top, right bottom, color-stop(0%,$bgGradientFrom), color-stop(100%,$bgGradientTo))
-  background-image:      -webkit-linear-gradient(-45deg,  $bgGradientFrom 0%,$bgGradientTo 100%)
-  background-image:      -o-linear-gradient(-45deg,  $bgGradientFrom 0%,$bgGradientTo 100%)
-  background-image:      -ms-linear-gradient(-45deg,  $bgGradientFrom 0%,$bgGradientTo 100%)
-  background-image:      linear-gradient(135deg,  $bgGradientFrom 0%,$bgGradientTo 100%)
-  background-attachment: fixed
-
-body
-  width: 100%
-  height: 100%
-  background: url(static/pipeline/image/xoxo.png) transparent repeat
-  background-size: 12%
-  background-position: 32px 84px
-  &.toadnav
-    padding-top: 70px
+//END POST
+//BEGIN FOOTER
 
 footer
   position: relative
@@ -294,9 +265,9 @@ footer
     color: $colorFooterAHover
   .git
     font-size: 11px
-    position: absolute
-    top: 5px
-    left: 5px
+    position:  absolute
+    top:       5px
+    left:      5px
   hr
     margin-top:    37px
     margin-bottom: 37px
@@ -334,6 +305,38 @@ footer
     margin-top: -1px
     transform:  rotate(90deg)
 
+//END FOOTER
+//BEGIN CORE
+
+html, .gradientBG
+  background-image:      $bgGradientFrom
+  background-image:      -moz-linear-gradient(-45deg,  $bgGradientFrom 0%, $bgGradientTo 100%)
+  background-image:      -webkit-gradient(linear, left top, right bottom, color-stop(0%,$bgGradientFrom), color-stop(100%,$bgGradientTo))
+  background-image:      -webkit-linear-gradient(-45deg,  $bgGradientFrom 0%,$bgGradientTo 100%)
+  background-image:      -o-linear-gradient(-45deg,  $bgGradientFrom 0%,$bgGradientTo 100%)
+  background-image:      -ms-linear-gradient(-45deg,  $bgGradientFrom 0%,$bgGradientTo 100%)
+  background-image:      linear-gradient(135deg,  $bgGradientFrom 0%,$bgGradientTo 100%)
+  background-attachment: fixed
+
+body
+  width:               100%
+  height:              100%
+  background:          url(static/pipeline/image/xoxo.png) transparent repeat
+  background-size:     12%
+  background-position: 32px 84px
+  &.toadnav
+    padding-top: 70px
+
+.media
+  .pull-left
+    padding-right: 5px
+  .media-body
+    span
+      font-size: 1.5em
+    small
+      display:   block
+      font-size: 1em
+
 .nav-icon, .batch-icon
   position: relative
 
@@ -348,11 +351,11 @@ footer
 
 .clearfix:after
   visibility: hidden
-  display: block
-  font-size: 0
-  content: " "
-  clear: both
-  height: 0
+  display:    block
+  font-size:  0
+  content:    " "
+  clear:      both
+  height:     0
 .clearfix
   display: inline-block
 * html .clearfix
@@ -360,5 +363,101 @@ footer
 .clearfix
   display: block
 
-.SERVE-TEST:hover .SERVE-TEST-SHOW
-  display: block
+.btn-oversized
+  font-size: 50px
+  padding:   20px
+
+form.modalform
+  position:       relative
+  left:           0
+  right:          0
+
+  padding-bottom: 29px
+  textarea
+    min-width: 100%
+    max-width: 100%
+    border:    none
+    padding:   7px
+  input, .rack
+    position:      absolute
+    border-radius: 0
+    bottom:        0
+    right:         0
+    height:        34px
+    border:        none
+  input[type="submit"]
+    background: white
+    &:hover
+      background: #dedede
+  .rack input
+    position: relative
+    float: right
+//END CORE
+//BEGIN LANDING
+
+.landing
+  text-align:    center
+  background:    rgba(255, 255, 255, 0.25)
+  border-radius: 0 !important
+  .btn
+    font-style:    italic
+    border-radius: 0
+    border:        none
+    width:         362px
+    background:    rgba(0, 0, 0, 0.25)
+    &:hover
+      background: rgba(0, 0, 0, 0.5)
+  .or
+    font-size: 16px
+
+//END LANDING
+//BEGIN NOTIFICATION
+
+.notification
+  position:      relative
+  background:    $bgNotification
+  margin-bottom: 10px
+  box-shadow:    0 0 10px rgba(0, 0, 0, 0.2)
+  &.unread
+    background: $bgNotificationUnread
+  &:hover
+    background: $bgNotificationHover
+  a.iconwell
+    margin-left: -48px
+    float:       left
+    &,img
+      display: inline-block
+      width:   48px
+      height:  48px
+  p
+    margin-left: 10px
+    margin-top:  5px
+    float:       left
+
+//END NOTIFICATION
+
+//BEGIN ANSWERBOX
+
+.answer
+  position:      relative
+  margin-bottom: 10px
+  margin-left:   32px
+  &.unread
+    .header
+      background: $bgNotificationUnread
+  .header
+    display:    block
+    min-height: 48px
+    background: $bgNotificationHover
+    div
+      margin-left: 10px
+      min-height:  24px
+  a.iconwell
+    margin-left: -48px
+    float:       left
+    &,img
+      display: inline-block
+      width:   48px
+      height:  48px
+
+//END ANSWERBOX
