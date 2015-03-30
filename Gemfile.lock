@@ -1,15 +1,18 @@
-PATH
-  remote: ./vendor/local/base-n
+GIT
+  remote: https://github.com/skiprope/base-n.git
+  revision: 58ca413e433cc2bae5f1badbb7d7c9a3b0874a18
   specs:
     base-n (1.0.0)
 
-PATH
-  remote: ./vendor/local/dumber
+GIT
+  remote: https://github.com/skiprope/dumber.git
+  revision: bf0caec8b4d339528a222368c22f290e93e3cb37
   specs:
     dumber (1.0.0)
 
-PATH
-  remote: ./vendor/local/livescript-rails
+GIT
+  remote: https://github.com/skiprope/livescript-rails.git
+  revision: 5f8633df735b23bce377071d9e7d2fbd35ddaa34
   specs:
     livescript-rails (1.1.1)
       execjs
@@ -17,8 +20,9 @@ PATH
       railties
       tilt
 
-PATH
-  remote: ./vendor/local/maruku
+GIT
+  remote: https://github.com/skiprope/maruku-dirty.git
+  revision: 78112f9223787b92c2dbd19417d6ed2888255352
   specs:
     maruku-dirty (0.7.2)
 
