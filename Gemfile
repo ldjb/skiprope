@@ -3,20 +3,20 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.1'
 gem 'unicorn'
 
-gem 'base-n', :path => "./vendor/local/base-n"
-gem 'dumber', :path => "./vendor/local/dumber"
+gem 'base-n', :git => "https://github.com/skiprope/base-n.git"
+gem 'dumber', :git => "https://github.com/skiprope/dumber.git"
 
 gem 'sass-rails', '~> 5.0'
 
 gem 'uglifier', '>= 1.3.0'
 
 gem 'coffee-rails', '~> 4.1.0'
-gem 'livescript-rails', ">= 1.1.0", :path => "./vendor/local/livescript-rails"
+gem 'livescript-rails', ">= 1.1.0", :git => "https://github.com/skiprope/livescript-rails.git"
 
 gem 'haml'
 gem 'haml-rails'
 
-gem 'maruku-dirty', :path => "./vendor/local/maruku"
+gem 'maruku-dirty', :git => "https://github.com/skiprope/maruku-dirty.git"
 gem 'motion-markdown-it'
 
 gem 'jquery-rails'
