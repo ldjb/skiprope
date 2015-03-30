@@ -5,7 +5,7 @@
     %h1 skiprope
     %p Introducing a crowd based question and answering service for all
     %p
-      %a.btn.btn-primary.btn-oversized{href: "/.hal/tomatofarm", role: "button"}
+      %a.btn.btn-primary.btn-oversized{href: "/#{Rails.application.config.skiprope["root"]}/tomatofarm", role: "button"}
         Sign up today!
-      %a.btn.btn-primary.or{href: "/feed"}
+      %a.btn.btn-primary.or{href: "/#{Rails.application.config.skiprope["root"]}/feed"}
         or take a look at the public answer stream

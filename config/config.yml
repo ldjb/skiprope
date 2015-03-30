@@ -1,0 +1,10 @@
+development: &development
+  root:   halrope
+  name:   "skiprope α"
+  domain: "//skiprope.plsgib.me"
+
+test:
+  <<: *development
+
+production:
+  <<: *development

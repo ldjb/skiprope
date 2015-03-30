@@ -41,7 +41,7 @@
           Keyboard Shortcuts
       %li.divider
       %li.fatico
-        %a{href: "/.hal/help"}
+        %a{href: "/#{Rails.application.config.skiprope["root"]}/help"}
           %span.batch-icon{data: {icon: ""}}
           Help
       %li.fatico
@@ -49,6 +49,6 @@
           %span.batch-icon{data: {icon: ""}}
           Report a Problem
       %li.fatico
-        %a{href: "/.hal/logout"}
+        %a{href: "/#{Rails.application.config.skiprope["root"]}/harvest"}
           %span.batch-icon{data: {icon: ""}}
           Log out
