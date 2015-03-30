@@ -1,0 +1,17 @@
+.devise.logister
+  %h2 Sign up
+  %h4= render "devise/shared/links"
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = devise_error_messages!
+    .tacowrapper
+      .field
+        %span= f.label :email
+        = f.email_field :email, autofocus: true
+      .field
+        %span= f.label :password
+        = f.password_field :password, autocomplete: "off"
+      .field
+        %span= f.label :password_confirmation
+        = f.password_field :password_confirmation, autocomplete: "off"
+      .actions
+        = f.submit "Sign up"

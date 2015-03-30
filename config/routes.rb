@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :users, path: $skiprope["root"], path_names: {
+    sign_out: "harvest",
+    sign_in: "tomatofarm",
+    sign_up: "plant",
+    edit: "settings/profile"
+  }, format: false
   # get 'core/landing'
 
   # The priority is based upon order of creation: first created -> highest priority.
