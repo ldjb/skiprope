@@ -8,6 +8,12 @@
         %span= f.label :email
         = f.email_field :email, autofocus: true
       .field
+        %span= f.label :screen_name
+        = f.text_field :screen_name
+      .field
+        %span= f.label :display_name
+        = f.text_field :display_name
+      .field
         %span= f.label :password
         = f.password_field :password, autocomplete: "off"
       .field
