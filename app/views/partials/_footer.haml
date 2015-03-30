@@ -1,12 +1,9 @@
 %footer
   %hr/
   %span.git
-    //dirtyyyyyy
-    - if not defined? rev and (defined? Rails and Rails.env.development? or defined? Serve)
-      - rev    = `git rev-parse --short HEAD`.strip
-    - if defined? rev and not rev.nil? and rev.length > 0
-      %a{href: "https://github.com/skiprope/skiprope/tree/#{rev}", target: "blank"}
-        running skiprope@#{rev}
+    - if not $skiprope["GIT_REV"].nil?
+      %a{href: "https://github.com/skiprope/skiprope/tree/#{$skiprope["GIT_REV"]}", target: "blank"}
+        running skiprope@#{$skiprope["GIT_REV"]}
   .icon-container
     .icon-octagon
       .icon-octagon.icon-octagon-inner

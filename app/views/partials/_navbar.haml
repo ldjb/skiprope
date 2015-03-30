@@ -1,7 +1,7 @@
 %nav.navbar.navbar-default.navbar-static-top
   .container
     .navbar-header.navbar-center
-      %a.navbar-brand{href: "#"} #{Rails.application.config.skiprope["name"]}
+      %a.navbar-brand{href: "#"} #{$skiprope["name"]}
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       - if defined? user
         = render partial: "partials/navbar_proto"
