@@ -45,5 +45,4 @@ end
 
 before_exec do |server|
   ENV["BUNDLE_GEMFILE"] = "#{root}/Gemfile"
-  ENV["RAILS_ENV"] = "production"
 end
