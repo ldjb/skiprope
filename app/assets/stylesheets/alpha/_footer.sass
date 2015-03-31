@@ -1,0 +1,51 @@
+//BEGIN FOOTER
+
+footer
+  position: relative
+  &, *
+    color: $colorFooterText
+  a:hover
+    color: $colorFooterAHover
+  .git
+    font-size: 11px
+    position:  absolute
+    top:       5px
+    left:      5px
+  hr
+    margin-top:    37px
+    margin-bottom: 37px
+    border-top:    1px solid $iconOctagonBorder
+    border-bottom: 1px solid $iconOctagonBorder
+  .icon-container
+    width:       64px
+    height:      64px
+    position:    absolute
+    top:         -32px
+    left:        50%
+    margin-left: -32px
+    *
+      width:    100%
+      height:   100%
+      position: absolute
+      top:      0
+      left:     0
+  .icon-octagon
+    -webkit-clip-path: polygon($octagon)
+    -moz-clip-path:    polygon($octagon)
+    -ms-clip-path:     polygon($octagon)
+    clip-path:         polygon($octagon)
+    background:        $iconOctagonBorder
+    &.icon-octagon-inner
+      background: $iconOctagonBackground
+      width:      54px
+      height:     54px
+      top:        5px
+      left:       5px
+  .icon-strike
+    height:     2px
+    background: $iconOctagonStrike
+    top:        50%
+    margin-top: -1px
+    transform:  rotate(90deg)
+
+//END FOOTER

@@ -6,6 +6,8 @@ gem 'unicorn'
 gem 'base-n', :git => "https://github.com/skiprope/base-n.git"
 gem 'dumber', :git => "https://github.com/skiprope/dumber.git"
 
+gem 'bootstrap_form'
+gem 'bootstrap-sass', '~> 3.3.4'
 gem 'sass-rails', '~> 5.0'
 
 gem 'uglifier', '>= 1.3.0'

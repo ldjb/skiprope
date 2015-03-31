@@ -1,0 +1,83 @@
+//BEGIN NAV
+
+nav.navbar
+  border:     none
+  background: $bgNavbar
+  &, *
+    color: $colorNavbar !important
+  .nav > li:hover, .dropdown-menu > li:hover a,
+    background: $bgNavbarSelected
+  .nav > li.active
+    background: $bgNavbarActive
+  .navbar-header.navbar-center
+    margin:     0 auto
+    display:    block
+    float:      none
+    position:   absolute
+    right:      0
+    left:       0
+    text-align: center
+    width:      100%
+    z-index:    -1
+    .navbar-brand
+      margin:      0
+      padding:     0
+      padding-top: 25px
+      float:       none
+      line-height: 0
+      display:     inline-block
+  form.fill
+    margin:    0
+    height:    50px
+    font-size: 0
+    button, input, .form-group
+      height:        100%
+      border-radius: 0
+      font-size:     14px
+      border:        none
+    button, input
+      background: $bgNavbarInput
+      color:      $colorNavbarInput !important
+      box-shadow: none
+      outline:    none
+      &:focus, &:hover
+        background: $bgNavbarInputSelected
+    button
+      margin-left: 0
+    input
+      margin-right: 0
+      border-right: none
+  .navbar-profile
+    padding: 0
+    margin:  0
+    img
+      height: 50px
+      width:  50px
+  .navbar-media-profile
+    a
+      min-height:  64px
+      padding-top: 0
+    img
+      width:  64px
+      height: 64px
+    .media-body, span, small
+      width:       200px
+      display:     inline-block
+      white-space: normal
+    span
+      font-size: 1.5em
+    small
+      display:   block
+      font-size: 1em
+  .dropdown
+    &:hover .dropdown-menu
+      display: block
+    .dropdown-menu
+      margin-top:    -1px
+      margin-right:  -1px
+      border-top:    none
+      border-radius: 0
+  .fatico .batch-icon
+    padding-right: 15px
+
+//END NAV

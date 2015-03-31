@@ -1,0 +1,107 @@
+//BEGIN POST
+
+.post-container
+  text-align:    justify
+  background:    $bgPost
+  margin-left:   48px
+  margin-bottom: 5px
+  box-shadow:    0 0 10px rgba(0, 0, 0, 0.2)
+  .header
+    a:not(.icon)
+      display: block
+    .icon
+      position:   absolute
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+      left:       -64px
+      top:        0
+      &,img
+        width:  64px
+        height: 64px
+  .body, .header, .footer
+    position:   relative
+    padding:    5px
+    background: $bgPostHeader
+  & > .body, .superfooter
+    padding-top:    15px
+    padding-bottom: 0
+  .body, .superfooter
+    background: $bgPost
+  .superfooter
+    position: relative
+    left:     -5px
+    .who
+      position: relative
+      a.icon
+        margin-right: 5px
+        &, img
+          width:  48px
+          height: 48px
+        position: absolute
+      .box
+        padding-left: 53px
+        display:      inline-block
+        div
+          height:      24px
+          line-height: 24px
+    .btn-rack
+      display:  block
+      position: absolute
+      right:    5px
+      bottom:   0
+      z-index:  8
+      .divider
+        display:  inline-block
+        position: relative
+        &:before
+          content:    ""
+          width:      1px
+          height:     16px
+          top:        -13px
+          position:   absolute
+          background: $bgBtnRackDivider
+      .btn
+        display: inline-block
+        &:hover
+          color: $bgBtnRackSelect
+        &:active
+          box-shadow: none
+      .btn-favorite
+        .batch-icon:before
+          content: ""
+          color:   darkred
+        &:hover .batch-icon:before
+          content: ""
+        &:active .batch-icon:before
+          content: ""
+  .comment-container
+    clear:         both
+    margin-bottom: 5px
+    a.iconwell
+      margin-right: 5px
+      &, img
+        width:  48px
+        height: 48px
+    .who
+      min-height:  24px
+      line-height: 24px
+    .comment
+      min-height: 24px
+  .footer
+    .favorites
+      margin-top: 5px
+      &:before
+        font-family: Batch
+        left:        -8px
+        top:         0
+        content:     ""
+        position:    absolute
+        font-size:   16px
+        color:       darkred
+      .iconwell
+        &, img
+          width:  24px
+          height: 24px
+    .body
+      background: $bgPostHeader
+
+//END POST

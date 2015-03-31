@@ -1,0 +1,92 @@
+//BEGIN CORE
+
+a
+  color: #9944ff
+  &:hover
+    color: #ee77ff
+
+html, .gradientBG
+  background-image:      $bgGradientFrom
+  background-image:      -moz-linear-gradient(-45deg,  $bgGradientFrom 0%, $bgGradientTo 100%)
+  background-image:      -webkit-gradient(linear, left top, right bottom, color-stop(0%,$bgGradientFrom), color-stop(100%,$bgGradientTo))
+  background-image:      -webkit-linear-gradient(-45deg,  $bgGradientFrom 0%,$bgGradientTo 100%)
+  background-image:      -o-linear-gradient(-45deg,  $bgGradientFrom 0%,$bgGradientTo 100%)
+  background-image:      -ms-linear-gradient(-45deg,  $bgGradientFrom 0%,$bgGradientTo 100%)
+  background-image:      linear-gradient(135deg,  $bgGradientFrom 0%,$bgGradientTo 100%)
+  background-attachment: fixed
+
+body
+  width:               100%
+  height:              100%
+  background:          image-url("xoxo.png") transparent repeat
+  background-size:     12%
+  background-position: 32px 84px
+  &.toadnav
+    padding-top: 70px
+
+.media
+  .pull-left
+    padding-right: 5px
+  .media-body
+    span
+      font-size: 1.5em
+    small
+      display:   block
+      font-size: 1em
+
+.nav-icon, .batch-icon
+  position: relative
+
+.nav-icon .label, .batch-icon .label
+  position: absolute
+  bottom:   7px
+  right:    5px
+  padding:  2px 3px
+
+.label
+  border-radius: 0
+
+.clearfix:after
+  visibility: hidden
+  display:    block
+  font-size:  0
+  content:    " "
+  clear:      both
+  height:     0
+.clearfix
+  display: inline-block
+* html .clearfix
+  height: 1%
+.clearfix
+  display: block
+
+.btn-oversized
+  font-size: 50px
+  padding:   20px
+
+form.modalform
+  position:       relative
+  left:           0
+  right:          0
+
+  padding-bottom: 29px
+  textarea
+    min-width: 100%
+    max-width: 100%
+    border:    none
+    padding:   7px
+  input, .rack
+    position:      absolute
+    border-radius: 0
+    bottom:        0
+    right:         0
+    height:        34px
+    border:        none
+  input[type="submit"]
+    background: white
+    &:hover
+      background: #dedede
+  .rack input
+    position: relative
+    float: right
+//END CORE

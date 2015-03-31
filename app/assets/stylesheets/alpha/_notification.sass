@@ -1,0 +1,24 @@
+//BEGIN NOTIFICATION
+
+.notification
+  position:      relative
+  background:    $bgNotification
+  margin-bottom: 10px
+  box-shadow:    0 0 10px rgba(0, 0, 0, 0.2)
+  &.unread
+    background: $bgNotificationUnread
+  &:hover
+    background: $bgNotificationHover
+  a.iconwell
+    margin-left: -48px
+    float:       left
+    &,img
+      display: inline-block
+      width:   48px
+      height:  48px
+  p
+    margin-left: 10px
+    margin-top:  5px
+    float:       left
+
+//END NOTIFICATION
